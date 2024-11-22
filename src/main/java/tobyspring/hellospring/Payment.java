@@ -5,12 +5,12 @@ import java.time.LocalDateTime;
 
 public class Payment {
 
-    private Long orderId;
-    private String currency;
-    private BigDecimal foreignCurrencyAmount;
-    private BigDecimal exRate;
-    private BigDecimal convertedAmount;
-    private LocalDateTime validUntil;
+    private final Long orderId;
+    private final String currency;
+    private final BigDecimal foreignCurrencyAmount;
+    private final BigDecimal exRate;
+    private final BigDecimal convertedAmount;
+    private final LocalDateTime validUntil;
 
     public Payment(Long orderId, String currency, BigDecimal foreignCurrencyAmount,
         BigDecimal exRate,
