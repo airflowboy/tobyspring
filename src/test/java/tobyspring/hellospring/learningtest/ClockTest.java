@@ -16,7 +16,7 @@ public class ClockTest {
         LocalDateTime dt1 = LocalDateTime.now(clock);
         LocalDateTime dt2 = LocalDateTime.now(clock);
 
-        Assertions.assertThat(dt2).isAfter(dt1);
+        Assertions.assertThat(dt2).isEqualTo(dt1);
     }
 
     @Test

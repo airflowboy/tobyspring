@@ -25,7 +25,7 @@ class PaymentServiceSpringTest {
     private ExRateProviderStub exRateProviderStub;
 
     @Test
-    void convertedAmount() throws Exception{
+    void convertedAmount() {
         Payment payment = paymentService.prepare(1L, "USD", BigDecimal.TEN);
 
         Assertions.assertThat(payment.getExRate()).isEqualByComparingTo(BigDecimal.valueOf(1_000));
@@ -39,7 +39,7 @@ class PaymentServiceSpringTest {
     }
 
     @Test
-    void validUntil() throws Exception {
+    void validUntil() {
         Payment payment = paymentService.prepare(1L, "USD", BigDecimal.TEN);
 
         LocalDateTime now = LocalDateTime.now(clock);
